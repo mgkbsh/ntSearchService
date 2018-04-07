@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 4567;
+const port = process.env.PORT || 6000;
 
 /* ===========BODY_PARSER=========== */
 const bodyParser = require('body-parser');
@@ -12,20 +12,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 /* =============ROUTES============= */
-const tweets = require('./controllers/tweets')
-const timeline = require('./controllers/timeline')
+const search = require('./controllers/search')
+const parse = require('./controllers/parse')
 const router = express.Router();
 
-router.get('/tweet', tweets.getTweet);
-router.post('/tweet', tweets.tweet);
-router.get('/likes', tweets.getLikes);
-router.post('/like', tweets.like);
-router.get('/retweets', tweets.getRetweets);
-router.post('/retweet', tweets.retweet);
-router.get('/timeline/original', timeline.getOriginalTimeline);
-router.get('/timeline/followees', timeline.getFolloweeTimeline);
-router.get('/timeline/global', timeline.getGlobalTimeline);
-router.get('/timeline/user', timeline.getUserTimeline);
+router.get('/search', search.search);
+router.post('/parse', parse.parse);
 
 app.use('/', router);
 

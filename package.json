@@ -1,7 +1,7 @@
 {
-  "name": "nttweetservice",
+  "name": "ntsearchservice",
   "version": "1.0.0",
-  "description": "Tweet service of NanoTwitter",
+  "description": "Search service of NanoTwitter",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgkbsh/ntTweetService.git"
+    "url": "git+https://github.com/mgkbsh/ntSearchService.git"
   },
   "author": "Akiba Sato, Kevin Wang, Meg Kobashi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mgkbsh/ntTweetService/issues"
+    "url": "https://github.com/mgkbsh/ntSearchService/issues"
   },
   "engines": {
     "node": "9.1.0"
   },
-  "homepage": "https://github.com/mgkbsh/ntTweetService",
+  "homepage": "https://github.com/mgkbsh/ntSearchService",
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt": "^1.0.3",

@@ -24,8 +24,6 @@ module.exports.search = async (req, res) => {
   try {
     var term = req.body.term;
 
-    console.log(req.body)
-
     if (!term) {
       throw new Error('Invalid search term');
     }

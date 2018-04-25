@@ -48,7 +48,6 @@ module.exports.search = async (req, res) => {
     res.json(JSON.parse(JSON.stringify(tweets)))
 
   } catch (err) {
-    res.status(404).send(err);
   }
 
 };
